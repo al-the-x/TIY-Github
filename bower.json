@@ -1,0 +1,16 @@
+{
+  "name": "TIY-Github",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sjoyal/TIY-Github",
+  "authors": [
+    "Sean Joyal <sean.joyal@gmail.com>"
+  ],
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

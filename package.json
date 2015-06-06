@@ -1,0 +1,20 @@
+{
+  "name": "TIY-Github",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "browser-sync start --server --files='src/test/spec/**/*.js, src/test/**/*.html, src/js/*.js' --startPath src/test/index.html",
+    "start": "browser-sync start --server --directory --files='src/index.html, src/css/*.css, src/js/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjoyal/TIY-Github.git"
+  },
+  "author": "Sean Joyal <sean.joyal@gmail.com>",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/sjoyal/TIY-Github/issues"
+  },
+  "homepage": "https://github.com/sjoyal/TIY-Github"
+}

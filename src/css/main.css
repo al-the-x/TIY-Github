@@ -95,6 +95,52 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.tabs {
+  display: block;
+  font-style: sans-serif;
+  font-weight: bold;
+  font-size: 1.75ex;
+  color: #6894CD;
+  border-bottom: .2ex solid lightgray;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs ul {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs-mobile {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 2.5em;
+  background-color: #FAFAFA;
+}
+
+.second {
+  border-left: .2ex solid lightgray;
+}
+
+.tabs-mobile a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  color: #6894CD;
+}
+
+.active a {
+  background-color: white;
+  color: black;
+  border-top: .35ex solid #D66729;
+  border-bottom: .2ex solid white;
+  margin-bottom: -.1ex
+}
+
 
 
 

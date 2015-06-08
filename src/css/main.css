@@ -198,6 +198,54 @@ textarea {
   color: #767676;
 }
 
+.social-stats {
+  padding-top: 1em;
+  background-color: #FAFAFA;
+  border-bottom: .2ex solid lightgray;
+}
+
+.social-stats .follow {
+  text-align: center;
+}
+
+.social-stats .follow button {
+  width: 97.75%;
+  height: 3.1em;
+  background-color: #81D465;
+  background-image: -webkit-linear-gradient(top, #80D263, #5DB358);
+  border: .15ex solid #5CA941;
+  border-radius: .2em;
+  color: white;
+  font-size: 1.5ex;
+  font-weight: bold;
+}
+
+.social-stats .follow button span {
+  padding-right: 4px;
+}
+
+.social-stats ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+}
+
+.social-stats ul li {
+  display: inline-block;
+  width: 33%;
+}
+
+.social-stats ul li .big-number {
+  font-size: 2.75ex;
+  font-weight: bolder;
+  margin-bottom: -6px;
+}
+
+.social-stats ul li .small-text {
+  font-size: 1.4ex;
+  color: #767676;
+}
 
 
 

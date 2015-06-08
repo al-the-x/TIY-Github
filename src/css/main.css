@@ -233,7 +233,7 @@ textarea {
 
 .social-stats ul li {
   display: inline-block;
-  width: 33%;
+  width: 30%;
 }
 
 .social-stats ul li .big-number {
@@ -262,6 +262,7 @@ textarea {
   margin-bottom: 0;
   padding: 0;
   text-align: left;
+  background-color: white;
 }
 
 .repositories-list ul li {
@@ -294,7 +295,7 @@ textarea {
 
 .repositories-list .left {
   display: inline-block;
-  width: 49.5%;
+  width: 65%;
 }
 
 .repositories-list ul .left span {
@@ -308,16 +309,49 @@ textarea {
   display: inline-block;
   text-align: right;
   font-size: 1.5ex;
-  width: 49.5%;
+  width: 33.5%;
 }
 
 .repositories-list ul .right span {
   padding-right: .75ex;
-  padding-left: .4ex;
+  padding-left: .5ex;
 }
 
+.desktop {
+  display: none;
+}
 
+.desktop .profile-details {
+  width: 33%;
+  margin-top: 1.5%;
+  margin-left: 11.5%;
+}
 
+.desktop .profile-details .profile-image {
+  display: block;
+  height: 13.5em;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop .profile-details .profile-info {
+  display: block;
+}
+
+.desktop .profile-details h2 {
+  margin: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+}
 
 
 

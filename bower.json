@@ -11,5 +11,9 @@
   "bugs": {
     "url": "https://github.com/al-the-x/TIY-Github/issues"
   },
-  "homepage": "https://github.com/al-the-x/TIY-Github"
+  "homepage": "https://github.com/al-the-x/TIY-Github",
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "~2.1.4"
+  }
 }

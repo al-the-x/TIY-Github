@@ -13,92 +13,112 @@
     </head>
     <body>
       <main class="container">
-        <nav class="tabs">
-          <ul>
-            <li class="tabs-mobile active"><a href="#about"><span>About</span></a></li><!--
-         --><li class="tabs-mobile second"><a href="#repositories"><span>Repositories</span></a></li>
-          </ul>
-        </nav> <!-- .tabs -->
-        <section class="profile-details">
-          <div class="profile-image">
-            <img src="https://avatars3.githubusercontent.com/u/583231?v=3&s=400" width="110px" height="110px">
-          </div>
-          <div class="profile-info">
-            <ul class="user-deets">
-              <li class="display-name">The Octocat</li>
-              <li class="username">octocat</li>
-              <li><span class="octicon octicon-organization"></span>GitHub</li>
-              <li><span class="octicon octicon-location"></span>San Francisco</li>
-              <li><span class="octicon octicon-mail"></span><a href="mailto:octocat@github.com">octocat@github.com</a></li>
-              <li><span class="octicon octicon-link"></span><a href="https://www.github.com/blog">https://www.github.com/blog</a></li>
-            </ul> <!-- .user-deets -->
-          </div>
-        </section> <!-- .profile-details -->
-        <section class="social-stats">
-          <div class="follow">
-            <button name="follow-button"><span class="octicon octicon-person"></span>Follow</button>
-          </div> <!-- .follow -->
-          <div>
-            <ul class="social numbers">
+        <div class="mobile">
+          <nav class="tabs">
+            <ul>
+              <li class="tabs-mobile active"><a href="#about"><span>About</span></a></li><!--
+           --><li class="tabs-mobile second"><a href="#repositories"><span>Repositories</span></a></li>
+            </ul>
+          </nav> <!-- .tabs -->
+          <section class="profile-details">
+            <div class="profile-image">
+              <img src="https://avatars3.githubusercontent.com/u/583231?v=3&s=400" width="110px" height="110px">
+            </div>
+            <div class="profile-info">
+              <ul class="user-deets">
+                <li class="display-name">The Octocat</li>
+                <li class="username">octocat</li>
+                <li><span class="octicon octicon-organization"></span>GitHub</li>
+                <li><span class="octicon octicon-location"></span>San Francisco</li>
+                <li><span class="octicon octicon-mail"></span><a href="mailto:octocat@github.com">octocat@github.com</a></li>
+                <li><span class="octicon octicon-link"></span><a href="https://www.github.com/blog">https://www.github.com/blog</a></li>
+              </ul> <!-- .user-deets -->
+            </div>
+          </section> <!-- .profile-details -->
+          <section class="social-stats">
+            <div class="follow">
+              <button name="follow-button"><span class="octicon octicon-person"></span>Follow</button>
+            </div> <!-- .follow -->
+            <div>
+              <ul class="social numbers">
+                <li>
+                  <div class="big-number">1k</div>
+                  <div class="small-text">Followers</div>
+                </li>
+                <li>
+                  <div class="big-number">2</div>
+                  <div class="small-text">Starred</div>
+                </li>
+                <li>
+                  <div class="big-number">6</div>
+                  <div class="small-text">Following</div>
+                </li>
+              </ul> <!-- .social numbers -->
+            </div> <!-- .social-numbers -->
+          </section> <!-- .social-stats -->
+          <section class="repositories-list">
+            <ul>
+              <li class="list-header">Popular repositories</li>
               <li>
-                <div class="big-number">1k</div>
-                <div class="small-text">Followers</div>
+                <div class="left">
+                  <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/Spoon-Knife">octocat/Spoon-Knife</a>
+                </div>
+                <div class="right">
+                  9,772<span class="octicon octicon-star"></span>
+                </div>
               </li>
               <li>
-                <div class="big-number">2</div>
-                <div class="small-text">Starred</div>
+                <div class="left">
+                  <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/Hello-World">octocat/Hello-World</a>
+                </div>
+                <div class="right">
+                  1,404<span class="octicon octicon-star"></span>
+                </div>
               </li>
               <li>
-                <div class="big-number">6</div>
-                <div class="small-text">Following</div>
+                <div class="left">
+                  <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/hello-world">octocat/hello-world</a>
+                </div>
+                <div class="right">
+                  10<span class="octicon octicon-star"></span>
+                </div>
               </li>
-            </ul> <!-- .social numbers -->
-          </div> <!-- .social-numbers -->
-        </section> <!-- .social-stats -->
-        <section class="repositories-list">
-          <ul>
-            <li class="list-header">Popular repositories</li>
-            <li>
-              <div class="left">
-                <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/Spoon-Knife">octocat/Spoon-Knife</a>
-              </div>
-              <div class="right">
-                9,772<span class="octicon octicon-star"></span>
-              </div>
-            </li>
-            <li>
-              <div class="left">
-                <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/Hello-World">octocat/Hello-World</a>
-              </div>
-              <div class="right">
-                1,404<span class="octicon octicon-star"></span>
-              </div>
-            </li>
-            <li>
-              <div class="left">
-                <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/hello-world">octocat/hello-world</a>
-              </div>
-              <div class="right">
-                10<span class="octicon octicon-star"></span>
-              </div>
-            </li>
-            <li>
-              <div class="left">
-                <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/octocat.github.io">octocat/octocat.github.io</a>
-              </div>
-              <div class="right">
-                8<span class="octicon octicon-star"></span>
-              </div>
-            </li>
-            <li>
-              <div class="left">
-                <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/git-consortium">octocat/git-consortium</a>
-              </div>
-              <div class="right">
-                5<span class="octicon octicon-star"></span>
-              </div>
-            </li>
-        </section> <!-- .popular-repositories -->
+              <li>
+                <div class="left">
+                  <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/octocat.github.io">octocat/octocat.github.io</a>
+                </div>
+                <div class="right">
+                  8<span class="octicon octicon-star"></span>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="octicon octicon-repo"></span><a href="https://www.github.com/octocat/git-consortium">octocat/git-consortium</a>
+                </div>
+                <div class="right">
+                  5<span class="octicon octicon-star"></span>
+                </div>
+              </li>
+          </section> <!-- .popular-repositories -->
+        </div> <!-- .mobile -->
+        <div class="desktop">
+          <section class="profile-details">
+            <div class="profile-image">
+              <img src="https://avatars3.githubusercontent.com/u/583231?v=3&s=400" width="230px" height="230px">
+            </div>
+            <div class="profile-info">
+                <h2>The Octocat</h2>
+                <h4>octocat</h4>
+              <ul class="user-deets">
+                <li><span class="octicon octicon-organization"></span>GitHub</li>
+                <li><span class="octicon octicon-location"></span>San Francisco</li>
+                <li><span class="octicon octicon-mail"></span><a href="mailto:octocat@github.com">octocat@github.com</a></li>
+                <li><span class="octicon octicon-link"></span><a href="https://www.github.com/blog">https://www.github.com/blog</a></li>
+                <li><span class="octicon octicon-clock"></span>Joined on Jan 25, 2011</li>
+              </ul> <!-- .user-deets -->
+            </div>
+          </section> <!-- .profile-details -->
+
       </main> <!-- .container -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

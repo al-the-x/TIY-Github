@@ -1,0 +1,32 @@
+@mixin col($A,$B){
+  width: floor($A/$B * 10000) / 100 + %;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: auto;
+  @extend .clearfix;
+
+  [class*="col-"] {
+    float: left;
+    padding-right: 2em;
+
+    &:last-of-type {
+      padding-right: auto;
+    }
+  }
+
+  .col {
+    @for $cols from 1 through 12 {
+      &-#{$cols} {
+        @include col($cols, 12);
+        @media screen and (max-width: 55em){
+          @include col(if($cols <= 6, $cols * 2, 12), 12);
+        }
+        @media screen and (max-width: 30em){
+          width: 100%;
+        }
+      }
+    }
+  }
+}

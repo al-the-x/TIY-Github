@@ -8,5 +8,12 @@
 }
 
 [class*="col-"].highlight {
-  background-color: grey;
+  $gray: #999;
+
+  background-color: $gray;
+
+  &:nth-child(even) {
+    background-color: $gray * 1.5;
+  }
+}
 }

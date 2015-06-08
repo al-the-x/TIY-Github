@@ -247,6 +247,74 @@ textarea {
   color: #767676;
 }
 
+.repositories-list {
+  padding-top: 1.75ex;
+  background-color: #FAFAFA;
+  border-bottom: .2ex solid lightgray;
+}
+
+.repositories-list ul {
+  list-style-type: none;
+  width: 97.5%;
+  margin-top: 0;
+  margin-left: 1.25%;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.repositories-list ul li {
+  height: 3.1em;
+  border-right: .2ex solid lightgray;
+  border-bottom: .2ex solid #EEEEEE;
+  border-left: .2ex solid lightgray;
+  line-height: 3.1em;
+  font-size: 1.7ex;
+  font-weight: bold;
+  color: #767676;
+}
+
+.repositories-list ul li a {
+  text-decoration: none;
+  color: #3C7ABB;
+  font-weight: bold;
+}
+
+.repositories-list ul .list-header {
+  border-top: .2ex solid lightgray;
+  border-bottom: .2ex solid lightgray;
+  font-weight: bold;
+  font-size: 1.65ex;
+  padding-left: 1.25%;
+  height: 2.5em;
+  line-height: 2.5em;
+  color: #444444;
+}
+
+.repositories-list .left {
+  display: inline-block;
+  width: 49.5%;
+}
+
+.repositories-list ul .left span {
+  color: #767676;
+  padding-right: 1ex;
+  padding-left: 1.75ex;
+}
+
+
+.repositories-list .right {
+  display: inline-block;
+  text-align: right;
+  font-size: 1.5ex;
+  width: 49.5%;
+}
+
+.repositories-list ul .right span {
+  padding-right: .75ex;
+  padding-left: .4ex;
+}
 
 
 

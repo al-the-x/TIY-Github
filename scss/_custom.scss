@@ -16,4 +16,14 @@
     background-color: $gray * 1.5;
   }
 }
+
+.grid .cell {
+  background-color: #CCC;
+  display: block;
+  box-sizing: border-box;
+  margin: 0.5ex 0.5em;
+  padding: 0.5ex 0.5em;
+  border: 1px solid;
+  font-size: 80%;
+  font-family: monospace;
 }

@@ -18,16 +18,54 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
         <main class="container">
           <h3>Don't Overthink It Grid</h3>
 
-          <template id="tpl-grid">
+          <h4> Split the screen into 12 even cells...</h4>
+          <section class="example">
+            <template data-repeat="11">
+              <section class="grid highlight">
+                <article class="col-${col} highlight"><span class="cell">.col-${col}</span></article>
+                <article class="highlight col-${12-col}"><span class="cell">.col-${12-col}</span></article>
+              </section><!-- .grid.highlight -->
+            </template>
+          </section><!-- .example -->
+
+          <h4>Give yourself a way to apply an offset or "pad" the cells...</h4>
+          <section class="example">
+            <template data-repeat="12">
+              <section class="grid highlight">
+                <article class="pad-${12 - col} col-${col} highlight"><span class="cell">.pad-${12 - col}.col-${col}</span></article>
+              </section><!-- .grid.highlight -->
+            </template>
+          </section><!-- .example -->
+
+          <h4>Cells naturally sit side-by-side with fixed-width gutters...</h4>
+          <section class="example">
             <section class="grid highlight">
-              <article class="col-${col} highlight">.col-${col}</article>
-            </section><!-- .grid.highlight -->
-          </template>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+              <article class="col-1 highlight"><span class="cell">.col-1</span></article>
+            </section>
+            <section class="grid highlight">
+              <article class="highlight col-2 pad-1"><span class="cell">.col-2.pad-1</span></article>
+              <article class="highlight col-3"><span class="cell">.col-3</span></article>
+              <article class="highlight col-4 pad-2"><span class="cell">.col-4</span></article>
+            </section>
+            <section class="grid highlight">
+              <article class="highlight col-6"><span class="cell">.col-6</span></article>
+              <article class="highlight col-6"><span class="cell">.col-6</span></article>
+            </section>
+          </section>
         </main><!-- .container -->
 
         <!-- bower:js -->

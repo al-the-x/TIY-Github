@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sjoyal/TIY-Github/issues"
   },
-  "homepage": "https://github.com/sjoyal/TIY-Github"
+  "homepage": "https://github.com/sjoyal/TIY-Github",
+  "devDependencies": {
+    "node-sass": "^3.1.2"
+  }
 }

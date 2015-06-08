@@ -1,10 +1,14 @@
 (function(window){
   $(function(){
-    var $tpl = $('template#tpl-grid'),
-        _tpl = _.template($tpl.html());
+    var $templates = $('template');
 
-    _.times(12, function(col){
-      $tpl.parent().append(_tpl({ 'col': col+1 }));
-    });
+    $templates.each(function(index, tpl){
+      var $tpl = $(tpl),
+          _tpl = _.template($tpl.html());
+
+      _.times($tpl.data('repeat'), function(col){
+        $tpl.parent().append(_tpl({ "col": col +1 }));
+      });
+    }); // END $templates.each
   }); // END document.ready
 })(window);

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server --files='index.html,css/*.css,js/*.js'"
+    "start": "browser-sync start --server --files='index.html,css/*.css,js/*.js'",
+    "bower": "bower",
+    "postbower": "wiredep -s '*.html'"
   },
   "repository": {
     "type": "git",

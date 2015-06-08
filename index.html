@@ -20,9 +20,20 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
+        <main class="container">
+          <h3>Don't Overthink It Grid</h3>
+
+          <template id="tpl-grid">
+            <section class="grid highlight">
+              <article class="col-${col} highlight">.col-${col}</article>
+            </section><!-- .grid.highlight -->
+          </template>
+        </main><!-- .container -->
+
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
         <!-- endbower -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

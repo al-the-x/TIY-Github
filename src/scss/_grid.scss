@@ -1,32 +1,67 @@
-@mixin col($A,$B){
-  width: floor($A/$B * 10000) / 100 + %;
-  box-sizing: border-box;
+$mq-width-sm: 30em !global;
+$mq-width-md: 55em !global;
+$mq-width-lg: 75em !global;
+$mq-width-xl: 120em !global;
+
+@mixin mq-max-width ($max-width){
+  @media screen and (max-width: #{$max-width}){
+    @content;
+  }
 }
 
-.grid {
+@mixin mq-sm {
+  @include mq-max-width($mq-width-sm){
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @include mq-max-width($mq-width-md){
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @include mq-max-width($mq-width-lg){
+    @content;
+  }
+}
+
+.row {
+  $gutter: 2em;
+
   width: auto;
   @extend .clearfix;
 
   [class*="col-"] {
     float: left;
-    padding-right: 2em;
+    padding-right: $gutter;
+    box-sizing: border-box;
 
     &:last-of-type {
-      padding-right: auto;
+      padding-right: 0;
     }
+  }
+
+  @mixin col($A,$B){
+    width: floor($A/$B * 10000) / 100 + %;
   }
 
   .col {
     @for $cols from 1 through 12 {
       &-#{$cols} {
         @include col($cols, 12);
-        @media screen and (max-width: 55em){
-          @include col(if($cols <= 6, $cols * 2, 12), 12);
+        @include mq-lg {
+          padding-right: $gutter / 2;
         }
-        @media screen and (max-width: 30em){
+        @include mq-md {
+          padding-right: 0;
+        }
+        @include mq-sm {
           width: 100%;
         }
-      }
-    }
-  }
-}
+      } // END .col-${col}
+    } // END @for $cols
+  } // END .col
+} // END .row
+

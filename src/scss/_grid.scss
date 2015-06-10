@@ -27,32 +27,33 @@ $mq-width-xl: 120em !global;
   }
 }
 
-.row {
-  $gutter: 2em;
+.grid {
+  $gutter-size: 2em;
+  $gutter-side: left;
 
   width: auto;
   @extend .clearfix;
 
-  [class*="col-"] {
+  [class*="unit-"] {
     float: left;
-    padding-left: $gutter;
+    padding-#{$gutter-side}: $gutter-size;
     box-sizing: border-box;
 
     &:first-child {
-      padding-left: 0;
+      padding-#{$gutter-side}: 0;
     }
   }
 
-  @mixin col($A, $B, $property: width){
+  @mixin unit($A, $B, $property: width){
     #{$property}: floor($A/$B * 10000) / 100 + %;
   }
 
-  .col {
+  .unit {
     @for $cols from 1 through 12 {
       &-#{$cols} {
-        @include col($cols, 12);
+        @include unit($cols, 12);
         @include mq-lg {
-          padding-left: $gutter / 2;
+          padding-#{$gutter-side}: $gutter-size / 2;
         }
         @include mq-md {
           padding-left: 0;
@@ -64,12 +65,14 @@ $mq-width-xl: 120em !global;
     } // END @for $cols
   } // END .col
 
-  .pad {
+  .push {
     @for $cols from 1 to 12 {
       &-#{$cols} {
-        @include col($cols, 12, margin-left);
+        @include unit($cols, 12, margin-left);
+        @include mq-sm {
+          margin-left: 0;
+        }
       }
-    }
+    } // END @for $cols
   }
-} // END .row
-
+} // END .grid

@@ -25,47 +25,47 @@
             with a fixed-width gutter between them.</h4>
           <section class="example">
             <template data-repeat="11">
-              <section class="row">
-                <article class="col-${col}"><span>.col-${col}</span></article>
-                <article class="col-${12-col}"><span>.col-${12-col}</span></article>
-              </section><!-- .row.-->
+              <section class="grid">
+                <article class="unit-${col}"><span>.unit-${col}</span></article>
+                <article class="unit-${12-col}"><span>.unit-${12-col}</span></article>
+              </section><!-- .grid.-->
             </template>
           </section><!-- .example -->
 
           <h4>Give yourself a way to apply an offset or "pad" the cells...</h4>
           <section class="example">
             <template data-repeat="12">
-              <section class="row">
-                <article class="pad-${12 - col} col-${col}"><span>.pad-${12 - col}.col-${col}</span></article>
-              </section><!-- .row.-->
+              <section class="grid">
+                <article class="push-${12 - col} unit-${col}"><span>.push-${12 - col}.unit-${col}</span></article>
+              </section><!-- .grid.-->
             </template>
           </section><!-- .example -->
 
           <h4>Cells naturally sit side-by-side with fixed-width gutters...<br>
-            and stack at "small" viewport sizes</h4>
+            but should stack at "small" viewport sizes</h4>
           <section class="example">
-            <section class="row">
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
-              <article class="col-1"><span>.col-1</span></article>
+            <section class="grid">
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
+              <article class="unit-1"><span>.unit-1</span></article>
             </section>
-            <section class="row">
-              <article class="col-2 pad-1"><span>.col-2.pad-1</span></article>
-              <article class="col-3"><span>.col-3</span></article>
-              <article class="col-4 pad-2"><span>.col-4</span></article>
+            <section class="grid">
+              <article class="unit-2 push-1"><span>.unit-2.push-1</span></article>
+              <article class="unit-3"><span>.unit-3</span></article>
+              <article class="unit-4 push-2"><span>.unit-4</span></article>
             </section>
-            <section class="row">
-              <article class="col-6"><span>.col-6</span></article>
-              <article class="col-6"><span>.col-6</span></article>
+            <section class="grid">
+              <article class="unit-6"><span>.unit-6</span></article>
+              <article class="unit-6"><span>.unit-6</span></article>
             </section>
           </section>
         </main><!-- .container -->

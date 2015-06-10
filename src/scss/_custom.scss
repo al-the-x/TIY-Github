@@ -4,11 +4,11 @@
 @import "grid";
 
 .example {
-  .row {
+  .grid {
     background-color: lightgray;
   }
 
-  [class*="col-"] {
+  [class*="unit-"] {
     $gray: #999;
 
     background-color: $gray;
@@ -29,4 +29,3 @@
     }
   }
 }
-

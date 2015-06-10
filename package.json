@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "browser-sync start --server --files='index.html,css/*.css,js/*.js'",
-    "sass": "node-sass scss -o css/",
+    "sass": "node-sass src/scss -o src/css/",
     "bower": "bower",
-    "postbower": "wiredep -s '*.html'"
+    "postbower": "wiredep -s 'src/*.html'"
   },
   "repository": {
     "type": "git",

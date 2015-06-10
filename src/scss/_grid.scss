@@ -43,8 +43,8 @@ $mq-width-xl: 120em !global;
     }
   }
 
-  @mixin col($A,$B){
-    width: floor($A/$B * 10000) / 100 + %;
+  @mixin col($A, $B, $property: width){
+    #{$property}: floor($A/$B * 10000) / 100 + %;
   }
 
   .col {
@@ -63,5 +63,13 @@ $mq-width-xl: 120em !global;
       } // END .col-${col}
     } // END @for $cols
   } // END .col
+
+  .pad {
+    @for $cols from 1 to 12 {
+      &-#{$cols} {
+        @include col($cols, 12, margin-left);
+      }
+    }
+  }
 } // END .row
 

@@ -11,7 +11,47 @@ $blue: cornflowerblue !global;
 
 @import "profile";
 
-.container > #repositories {
+.container > #mobile-repositories {
+  & > * {
+    margin-top: 2ex;
+  }
+  .tabs {
+    @extend .clearfix;
+    margin-left:0; padding-left:0;
+    border-bottom: 1px solid $lightgray;
+
+    & > li {
+      display: block; float: left;
+      margin-bottom: -1px;
+      padding: 1ex 1em;
+      &.active {
+        border: 1px solid $lightgray;
+        border-bottom: none;
+        background-color: white;
+      }
+      & > a {
+        display: block;
+        color: $gray;
+        font-size: 1.2em;
+        text-decoration: none;
+
+        &[href="#contributions"] {
+          @extend .octicon-diff-added;
+        }
+        &[href="#repositories"] {
+          @extend .octicon-repo;
+        }
+        &[href="#activity"] {
+          @extend .octicon-rss;
+        }
+        &::before {
+          @extend .octicon;
+          width: 1.2em;
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
   #contributions {
     .repo-list {
       h4 {

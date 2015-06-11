@@ -34,7 +34,9 @@ $mq-width-xl: 120em !global;
   width: auto;
   @extend .clearfix;
 
-  & > [class*="unit-"] {
+  @mixin unit($A, $B, $property: width){
+    #{$property}: floor($A/$B * 10000) / 100 + %;
+
     float: left;
     padding-#{$gutter-side}: $gutter-size;
     box-sizing: border-box;
@@ -44,37 +46,29 @@ $mq-width-xl: 120em !global;
     }
   }
 
-  @mixin unit($A, $B, $property: width){
-    #{$property}: floor($A/$B * 10000) / 100 + %;
-  }
-
-  & > .unit {
-    @for $cols from 1 through 12 {
-      &-#{$cols} {
-        @include unit($cols, 12);
-        @include mq-lg {
-          padding-#{$gutter-side}: $gutter-size / 2;
-        }
-        @include mq-md {
-          padding-left: 0;
-        }
-        @include mq-sm {
-          width: 100%;
-        }
-      } // END .col-${col}
-    } // END @for $cols
-  } // END .col
-
-  & > .push {
-    @for $cols from 1 to 12 {
-      &-#{$cols} {
-        @include unit($cols, 12, margin-left);
-        @include mq-sm {
-          margin-left: 0;
-        }
+  @for $cols from 1 through 12 {
+    & > .unit-#{$cols} {
+      @include unit($cols, 12);
+      @include mq-lg {
+        padding-#{$gutter-side}: $gutter-size / 2;
       }
-    } // END @for $cols
-  }
+      @include mq-md {
+        padding-left: 0;
+      }
+      @include mq-sm {
+        width: 100%;
+      }
+    } // END .unit-${col}
+  } // END @for $cols
+
+  @for $cols from 1 to 12 {
+    & > .push-#{$cols} {
+      @include unit($cols, 12, margin-left);
+      @include mq-sm {
+        margin-left: 0;
+      }
+    }
+  } // END @for $cols
 
   & img.responsive {
     width: 100%;

@@ -52,6 +52,14 @@ $blue: cornflowerblue !global;
       } // END & > a
     } // END & > li
   } // END .tabs
+
+  .panel {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
   #contributions {
     .repo-list {
       h4 {

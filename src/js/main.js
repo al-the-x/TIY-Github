@@ -15,16 +15,29 @@
 
 (function(window){
   $(function(){
-    $('.tabs').on('click', 'a[href^="#"]', function(event){
-      event.preventDefault();
+    $('.tabs')
+      .on('click', 'a[href^="#"]', function(event){
+        event.preventDefault();
 
-      $(this).add(this.hash).trigger('activate');
-    }).on('activate', 'li', function(event){
-      $(this).addClass('active').siblings().removeClass('active');
-    }).children('li:first').trigger('activate');
+        $(this).add(this.hash).trigger('activate');
+      })
+      .on('activate', 'li', function(event){
+        $(this)
+          .addClass('active')
+        .siblings()
+          .removeClass('active');
+      })
+    .children('li:first')
+      .trigger('activate');
 
-    $('.panel').on('activate', function(event){
-      $(this).addClass('active').siblings().removeClass('active');
-    });
+    $('.panel')
+      .on('activate', function(event){
+        $(this)
+          .addClass('active')
+        .siblings()
+          .removeClass('active');
+      })
+    .first()
+      .trigger('activate');
   });
 })(window);

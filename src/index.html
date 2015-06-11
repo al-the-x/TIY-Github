@@ -55,6 +55,38 @@
               </ul>
             </header>
           </aside><!--.profile-->
+          <section class="grid unit-9" id="repositories">
+            <ul class="tabs grid">
+              <li class="unit-2"><a href="#contributions">Contributions</a>
+              <li class="unit-2"><a href="#">Repositories</a>
+              <li class="unit-2"><a href="#">Activity</a>
+            </ul><!--.grid-->
+
+            <div class="panel grid" id="contributions">
+              <aside class="repo-list unit-6" id="repo-list-popular">
+                <h4>Popular Repositories</h4>
+                <ul>
+                  <li class="grid">
+                    <header class="unit-6">
+                      <h5>{{repo.name}}</h5>
+                      <p>{{repo.description}}</p>
+                    </header>
+                    <strong class="stars">{{repo.stargazers_count}}</strong>
+                </ul>
+              </aside><!--#repo-list-popular-->
+              <aside class="repo-list unit-6" id="repo-list-contributed">
+                <h4>Repositories contributed to</h4>
+                <ul>
+                  <li class="grid">
+                    <header class="unit-6">
+                      <h5>{{repo.name}}</h5>
+                      <p>{{repo.description}}</p>
+                    </header>
+                    <strong class="stars">{{repo.stargazers_count}}</strong>
+                  </li>
+                </ul>
+              </aside>
+          </section><!--#repositories-->
         </main><!-- .container.grid -->
 
         <!-- bower:js -->

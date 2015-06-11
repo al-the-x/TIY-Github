@@ -10,9 +10,10 @@
      * @return ???
      */
     .then(function(user){
+      var nameTpl = _.template($('.profile-name').html());
 
+      console.log(nameTpl({ 'user': user }));
 
-      $name.text(user.name);
-      $username.text(user.login);
+      $('.profile-name').html(nameTpl({ 'user': user }));
     })
 })(window);

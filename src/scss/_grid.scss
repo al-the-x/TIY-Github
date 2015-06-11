@@ -39,8 +39,8 @@ $mq-width-xl: 120em !global;
 
   @extend .clearfix;
 
-  @mixin unit($A, $B, $property: width){
-    #{$property}: floor($A/$B * 10000) / 100 + %;
+  @mixin unit($cols, $max-cols, $property: width){
+    #{$property}: percentage($cols/$max-cols);
 
     float: left;
     padding-#{$gutter-side}: $gutter-size;

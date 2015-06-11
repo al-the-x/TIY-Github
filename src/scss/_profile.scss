@@ -13,7 +13,7 @@ $octicons-font-path: "/bower_components/octicons/octicons/";
       display: block;
     }
     small {
-      color: lighten($font-color, 50);
+      color: $gray;
     }
   } // END &-name
 
@@ -22,7 +22,7 @@ $octicons-font-path: "/bower_components/octicons/octicons/";
     margin: 0; padding: 0;
     & > li::before {
       @extend .octicon;
-      color: lighten($font-color, 50);
+      color: $gray;
       width: 1.2em;
     }
     &-org { @extend .octicon-organization; }

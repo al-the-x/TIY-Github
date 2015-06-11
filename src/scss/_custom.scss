@@ -1,7 +1,10 @@
 // bower:scss
 // endbower
 
-$font-color: #333;
+$black: #333 !global;
+$gray: #666 !global;
+$lightgray: #CCC !global;
+$blue: cornflowerblue !global;
 
 @import "grid";
 @import "guide";

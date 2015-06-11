@@ -34,7 +34,7 @@ $mq-width-xl: 120em !global;
   width: auto;
   @extend .clearfix;
 
-  [class*="unit-"] {
+  & > [class*="unit-"] {
     float: left;
     padding-#{$gutter-side}: $gutter-size;
     box-sizing: border-box;
@@ -48,7 +48,7 @@ $mq-width-xl: 120em !global;
     #{$property}: floor($A/$B * 10000) / 100 + %;
   }
 
-  .unit {
+  & > .unit {
     @for $cols from 1 through 12 {
       &-#{$cols} {
         @include unit($cols, 12);
@@ -65,7 +65,7 @@ $mq-width-xl: 120em !global;
     } // END @for $cols
   } // END .col
 
-  .push {
+  & > .push {
     @for $cols from 1 to 12 {
       &-#{$cols} {
         @include unit($cols, 12, margin-left);
@@ -74,5 +74,9 @@ $mq-width-xl: 120em !global;
         }
       }
     } // END @for $cols
+  }
+
+  & img.responsive {
+    width: 100%;
   }
 } // END .grid

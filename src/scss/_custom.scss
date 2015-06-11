@@ -1,31 +1,41 @@
 // bower:scss
 // endbower
 
+$font-color: #333;
+
 @import "grid";
+@import "guide";
 
-.example {
-  .grid {
-    background-color: lightgray;
+$octicons-font-path: "/bower_components/octicons/octicons/";
+@import "octicons/octicons/octicons.scss";
+
+.profile {
+  padding: 0 1em !important;
+
+  &-avatar img {
+    border-radius: 5pt;
   }
 
-  [class*="unit-"] {
-    $gray: #999;
-
-    background-color: $gray;
-
-    &:nth-child(even) {
-      background-color: $gray * 1.5;
-    }
-
-    span {
-      background-color: #CCC;
+  &-name {
+    big, small {
       display: block;
-      box-sizing: border-box;
-      margin: 0.5ex 0.5em;
-      padding: 0.5ex 0.5em;
-      border: 1px solid;
-      font-size: 80%;
-      font-family: monospace;
     }
-  }
-}
+    small {
+      color: lighten($font-color, 50);
+    }
+  } // END &-name
+
+  &-details {
+    list-style: none;
+    margin: 0; padding: 0;
+    & > li::before {
+      @extend .octicon;
+      color: lighten($font-color, 50);
+      width: 1.2em;
+    }
+    &-org { @extend .octicon-organization; }
+    &-loc { @extend .octicon-location; }
+    &-eml { @extend .octicon-mail; }
+    &-jnd { @extend .octicon-clock; }
+  } // END &-details
+} // END .profile

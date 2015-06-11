@@ -10,6 +10,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <!-- bower:css -->
+        <!-- endbower -->
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -18,9 +20,74 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <main class="container">
-          <h3> Blank slate... </h3>
-        </main><!-- .container -->
+        <div class="grid example">
+          <div class="unit-1"><span>1</span></div>
+          <div class="unit-1"><span>2</span></div>
+          <div class="unit-1"><span>3</span></div>
+          <div class="unit-1"><span>4</span></div>
+          <div class="unit-1"><span>5</span></div>
+          <div class="unit-1"><span>6</span></div>
+          <div class="unit-1"><span>7</span></div>
+          <div class="unit-1"><span>8</span></div>
+          <div class="unit-1"><span>9</span></div>
+          <div class="unit-1"><span>10</span></div>
+          <div class="unit-1"><span>11</span></div>
+          <div class="unit-1"><span>12</span></div>
+        </div>
+        <main class="container grid">
+          <aside class="profile unit-3" id="mobile-about">
+            <header>
+              <a href="http://lorempixel.com/200/200/people"
+                  class="profile-avatar">
+                <img src="http://lorempixel.com/200/200/people" alt="avatar"
+                  class="responsive"></a>
+            </header>
+            <article class="unit-10">
+              <h3 class="profile-name">
+                <big>{{user.name}}</big>
+                <small>{{user.login}}</small>
+              </h3>
+              <ul class="profile-details">
+                <li class="profile-details-org">{{user.company}}</li>
+                <li class="profile-details-loc">{{user.location}}</li>
+                <li class="profile-details-eml">{{user.email}}</li>
+                <li class="profile-details-jnd">{{user.joined_at}}</li>
+              </ul>
+            </header>
+          </aside><!--.profile-->
+          <section class="grid unit-9" id="mobile-repositories">
+            <ul class="tabs">
+              <li><a href="#contributions">Contributions</a>
+              <li><a href="#repositories">Repositories</a>
+              <li><a href="#activity">Public Activity</a>
+            </ul><!--.grid-->
+
+            <div class="panel grid" id="contributions">
+              <aside class="repo-list unit-6" id="repo-list-popular">
+                <h4>Popular Repositories</h4>
+                <ul>
+                  <li class="grid">
+                    <header class="unit-6">
+                      <h5>{{repo.name}}</h5>
+                      <p>{{repo.description}}</p>
+                    </header>
+                    <strong class="stars">{{repo.stargazers_count}}</strong>
+                </ul>
+              </aside><!--#repo-list-popular-->
+              <aside class="repo-list unit-6" id="repo-list-contributed">
+                <h4>Repositories contributed to</h4>
+                <ul>
+                  <li class="grid">
+                    <header class="unit-6">
+                      <h5>{{repo.name}}</h5>
+                      <p>{{repo.description}}</p>
+                    </header>
+                    <strong class="stars">{{repo.stargazers_count}}</strong>
+                  </li>
+                </ul>
+              </aside>
+          </section><!--#repositories-->
+        </main><!-- .container.grid -->
 
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>

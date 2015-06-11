@@ -27,49 +27,55 @@ $mq-width-xl: 120em !global;
   }
 }
 
-.row {
-  $gutter: 2em;
+.grid {
+  $gutter-size: 2em;
+  $gutter-side: left;
 
   width: auto;
+
+  // Limited reset so `.grid` can apply to `<ul>` / `<ol>`
+  list-style: none;
+  margin:0; padding:0;
+
   @extend .clearfix;
 
-  [class*="col-"] {
+  @mixin unit($A, $B, $property: width){
+    #{$property}: floor($A/$B * 10000) / 100 + %;
+
     float: left;
-    padding-left: $gutter;
+    padding-#{$gutter-side}: $gutter-size;
     box-sizing: border-box;
 
     &:first-child {
-      padding-left: 0;
+      padding-#{$gutter-side}: 0;
     }
   }
 
-  @mixin col($A, $B, $property: width){
-    #{$property}: floor($A/$B * 10000) / 100 + %;
-  }
+  @for $cols from 1 through 12 {
+    & > .unit-#{$cols} {
+      @include unit($cols, 12);
+      @include mq-lg {
+        padding-#{$gutter-side}: $gutter-size / 2;
+      }
+      @include mq-md {
+        padding-left: 0;
+      }
+      @include mq-sm {
+        width: 100%;
+      }
+    } // END .unit-${col}
+  } // END @for $cols
 
-  .col {
-    @for $cols from 1 through 12 {
-      &-#{$cols} {
-        @include col($cols, 12);
-        @include mq-lg {
-          padding-left: $gutter / 2;
-        }
-        @include mq-md {
-          padding-left: 0;
-        }
-        @include mq-sm {
-          width: 100%;
-        }
-      } // END .col-${col}
-    } // END @for $cols
-  } // END .col
-
-  .pad {
-    @for $cols from 1 to 12 {
-      &-#{$cols} {
-        @include col($cols, 12, margin-left);
+  @for $cols from 1 to 12 {
+    & > .push-#{$cols} {
+      @include unit($cols, 12, margin-left);
+      @include mq-sm {
+        margin-left: 0;
       }
     }
-  }
-} // END .row
+  } // END @for $cols
 
+  & img.responsive {
+    width: 100%;
+  }
+} // END .grid

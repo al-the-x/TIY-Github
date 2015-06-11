@@ -1,32 +1,112 @@
 // bower:scss
 // endbower
 
-@import "grid";
+$black: #333 !global;
+$gray: #666 !global;
+$lightgray: #CCC !global;
+$blue: cornflowerblue !global;
 
-.example {
-  .row {
-    background-color: lightgray;
+@import "grid";
+@import "guide";
+
+@import "profile";
+
+.container > #mobile-repositories {
+  & > * {
+    margin-top: 2ex;
+  }
+  .tabs {
+    @extend .clearfix;
+    margin-left:0; padding-left:0;
+    border-bottom: 1px solid $lightgray;
+
+    & > li {
+      display: block; float: left;
+      margin-bottom: -1px;
+      padding: 1ex 1em;
+      &.active {
+        border: 1px solid $lightgray;
+        border-bottom: none;
+        background-color: white;
+      }
+      & > a {
+        display: block;
+        color: $gray;
+        font-size: 1.2em;
+        text-decoration: none;
+
+        &[href="#contributions"] {
+          @extend .octicon-diff-added;
+        }
+        &[href="#repositories"] {
+          @extend .octicon-repo;
+        }
+        &[href="#activity"] {
+          @extend .octicon-rss;
+        }
+        &::before {
+          @extend .octicon;
+          width: 1.2em;
+          font-size: 1.1em;
+        }
+      } // END & > a
+    } // END & > li
+  } // END .tabs
+
+  .panel {
+    display: none;
+    &.active {
+      display: block;
+    }
   }
 
-  [class*="col-"] {
-    $gray: #999;
+  #contributions {
+    .repo-list {
+      h4 {
+        background-color: $lightgray;
+        border: 1px solid gray {
+          bottom: none;
+        }
 
-    background-color: $gray;
+        border-top: {
+          left-radius: 5pt;
+          right-radius: 5pt;
+        }
+        margin:0; padding: 1ex 1em;
+      }
+      ul {
+        margin:0; padding:0;
+        list-style-type: none;
+        border-bottom: 1px solid gray;
+      }
+      li {
+        border: 1px solid gray {
+          bottom: none;
+        }
+        padding: 1ex 1em;
 
-    &:nth-child(even) {
-      background-color: $gray * 1.5;
-    }
-
-    span {
-      background-color: #CCC;
-      display: block;
-      box-sizing: border-box;
-      margin: 0.5ex 0.5em;
-      padding: 0.5ex 0.5em;
-      border: 1px solid;
-      font-size: 80%;
-      font-family: monospace;
+        h5 {
+          @extend .octicon-repo;
+          &::before {
+            @extend .octicon;
+            width: 1.2em;
+          }
+          margin:0; padding:0;
+          font-size: 1.2em;
+        }
+        p {
+          margin:0; padding:0;
+          margin-left: 1.2em;
+        }
+        .stars {
+          float: right;
+          color: $gray;
+          &::after {
+            @extend .octicon;
+            content: '\f02a';
+          }
+        }
+      }
     }
   }
 }
-

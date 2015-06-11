@@ -32,6 +32,11 @@ $mq-width-xl: 120em !global;
   $gutter-side: left;
 
   width: auto;
+
+  // Limited reset so `.grid` can apply to `<ul>` / `<ol>`
+  list-style: none;
+  margin:0; padding:0;
+
   @extend .clearfix;
 
   @mixin unit($A, $B, $property: width){

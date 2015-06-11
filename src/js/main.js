@@ -1,43 +1,19 @@
-(function(window){
-  $(function(){
-    var $templates = $('template');
+;(function(window){
+  var $name = $('.profile-name big'),
+      $username = $('.profile-name small');
 
-    $templates.each(function(index, tpl){
-      var $tpl = $(tpl),
-          _tpl = _.template($tpl.html());
+  $.getJSON('/api/github/users/al-the-x.json')
+    /**
+     * Replacing placeholders with data from...?
+     *
+     * @param user
+     * @return ???
+     */
+    .then(function(user){
+      var nameTpl = _.template($('.profile-name').html());
 
-      _.times($tpl.data('repeat'), function(col){
-        $tpl.parent().append(_tpl({ "col": col +1 }));
-      });
-    }); // END $templates.each
-  }); // END document.ready
-})(window);
+      console.log(nameTpl({ 'user': user }));
 
-(function(window){
-  $(function(){
-    $('.tabs')
-      .on('click', 'a[href^="#"]', function(event){
-        event.preventDefault();
-
-        $(this).add(this.hash).trigger('activate');
-      })
-      .on('activate', 'li', function(event){
-        $(this)
-          .addClass('active')
-        .siblings()
-          .removeClass('active');
-      })
-    .children('li:first')
-      .trigger('activate');
-
-    $('.panel')
-      .on('activate', function(event){
-        $(this)
-          .addClass('active')
-        .siblings()
-          .removeClass('active');
-      })
-    .first()
-      .trigger('activate');
-  });
+      $('.profile-name').html(nameTpl({ 'user': user }));
+    })
 })(window);

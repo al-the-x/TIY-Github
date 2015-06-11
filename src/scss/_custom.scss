@@ -11,6 +11,19 @@ $blue: cornflowerblue !global;
 
 @import "profile";
 
+.visible-at-sm {
+  display: none;
+  @include mq-sm {
+    display: block;
+  }
+}
+.visible-at-lg {
+  display: none;
+  @include mq-lg {
+    display: block;
+  }
+}
+
 .container > #mobile-repositories {
   & > * {
     margin-top: 2ex;

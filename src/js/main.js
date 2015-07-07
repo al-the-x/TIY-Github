@@ -1,19 +1,22 @@
 ;(function(window){
-  var $name = $('.profile-name big'),
-      $username = $('.profile-name small');
+  var app = angular.module('TIY-Github', [ ]);
 
-  $.getJSON('/api/github/users/al-the-x.json')
-    /**
-     * Replacing placeholders with data from...?
-     *
-     * @param user
-     * @return ???
-     */
-    .then(function(user){
-      var nameTpl = _.template($('.profile-name').html());
+  app.controller('MainController', function($http){
+    var self = this;
 
-      console.log(nameTpl({ 'user': user }));
+    this.user = {
+      name: 'David L Rogers',
+      login: 'al-the-x',
+      company: 'The Iron Yard'
+    };
 
-      $('.profile-name').html(nameTpl({ 'user': user }));
-    })
+  }); // END controller(MainController)
+
+  // Inside the magic of `ng-controller`...
+  // var MainController = app.controller('MainController');
+  //
+  // var app = new MainController({
+  //   el: // whatever ng-controller is an attribute of
+  //   data: // whatever is attached to `this` inside MainController
+  // }); // new Vue({ el: ..., data: ... })
 })(window);

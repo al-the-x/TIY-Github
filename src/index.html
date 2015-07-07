@@ -49,14 +49,14 @@
             </header>
             <article class="unit-10">
               <h3 class="profile-name">
-                <big>${user.name}</big>
-                <small>${user.login}</small>
+                <big>{{app.user.name}}</big>
+                <small>{{app.user.login}}</small>
               </h3>
               <ul class="profile-details">
-                <li class="profile-details-org">{{user.company}}</li>
-                <li class="profile-details-loc">{{user.location}}</li>
-                <li class="profile-details-eml">{{user.email}}</li>
-                <li class="profile-details-jnd">{{user.joined_at}}</li>
+                <li class="profile-details-org">{{app.user.company}}</li>
+                <li class="profile-details-loc">{{app.user.location}}</li>
+                <li class="profile-details-eml">{{app.user.email}}</li>
+                <li class="profile-details-jnd">{{app.user.joined_at}}</li>
               </ul>
             </header>
           </aside><!--.profile-->

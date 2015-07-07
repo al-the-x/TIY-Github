@@ -16,6 +16,7 @@
     "modernizr": "~2.8.3",
     "jquery": "~2.1.4",
     "lodash": "~3.9.3",
-    "octicons": "~2.4.1"
+    "octicons": "~2.4.1",
+    "angular": "~1.4.1"
   }
 }

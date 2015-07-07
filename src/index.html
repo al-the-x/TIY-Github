@@ -39,7 +39,8 @@
             <a href="#mobile-about">About</a>
             <a href="#mobile-repositories">Repositories</a>
           </nav><!--.tabs-->
-          <aside class="profile unit-3" id="mobile-about">
+          <aside class="profile unit-3" id="mobile-about"
+              ng-app="TIY-Github" ng-controller="MainController as app">
             <header>
               <a href="http://lorempixel.com/200/200/people"
                   class="profile-avatar">
@@ -48,14 +49,14 @@
             </header>
             <article class="unit-10">
               <h3 class="profile-name">
-                <big>${user.name}</big>
-                <small>${user.login}</small>
+                <big>{{app.user.name}}</big>
+                <small>{{app.user.login}}</small>
               </h3>
               <ul class="profile-details">
-                <li class="profile-details-org">{{user.company}}</li>
-                <li class="profile-details-loc">{{user.location}}</li>
-                <li class="profile-details-eml">{{user.email}}</li>
-                <li class="profile-details-jnd">{{user.joined_at}}</li>
+                <li class="profile-details-org">{{app.user.company}}</li>
+                <li class="profile-details-loc">{{app.user.location}}</li>
+                <li class="profile-details-eml">{{app.user.email}}</li>
+                <li class="profile-details-jnd">{{app.user.joined_at}}</li>
               </ul>
             </header>
           </aside><!--.profile-->
@@ -111,6 +112,7 @@
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <script src="../bower_components/lodash/lodash.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
         <!-- endbower -->
         <script src="js/plugins.js"></script>
         <script src="js/tabs.js"></script>
